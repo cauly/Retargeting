@@ -12,7 +12,6 @@ Cauly 리타겟팅 연동 가이드
 
 
 
-
 ### 목차
 - [연동 절차](#연동-절차)
 - [연동 상세](#연동-상세)
@@ -39,8 +38,13 @@ tracker 스크립트의 삽입 위치는 아래 3군데이며 차례대로 기�
 - 상품 상세 페이지
 - 구매완료 페이지
 
-Cauly 에서 발급한 site_code 를 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 라고 가정하겠습니다.
-예제 코드에서 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 부분은 따로 발급 받은 site_code 로 대치하여야 합니다.
+Cauly 에서 발급한 track_code 를 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 라고 가정하겠습니다.
+예제 코드에서 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 부분은 따로 발급 받은 track_code 로 대체하여야 합니다.
+
+### Native SDK
+1.0.1 버전 iOS/Android SDK의 Purchase API는 작동하지 않습니다.
+- [Android SDK](https://github.com/CaulyTracker/Android-Tracking-SDK)
+- [iOS SDK](https://github.com/CaulyTracker/iOS-Tracking-SDK)
 
 #### 메인 페이지
 ##### 스크립트 삽입
