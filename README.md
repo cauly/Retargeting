@@ -179,11 +179,6 @@ var _rblqueue = _rblqueue || [];
 _rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
 _rblqueue.push(['setVar','device','{$device}']);
 _rblqueue.push(['setVar','orderId','{$orderId}']);
-
-
-----------
-
-
 _rblqueue.push(['setVar','orderPrice','{$orderPrice}']);
 _rblqueue.push(['setVar','userId','{$userId}']);		// optional
 _rblqueue.push(['track','order']);
