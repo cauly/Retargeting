@@ -210,3 +210,47 @@ setTimeout(function() {
 - {$orderPrice} : 결제완료된 주문의 가격
 - {$userId} : 방문한 유저의 로그인 아이디 (optional) 법적이슈의 문제로 HASH 값을 넣어주는 것이 일반적이다.
 
+##### 스크립트 삽입(재구매를 따로 표시하려면)
+```javascript
+<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
+<script type="text/javascript">
+         var mTracker = new CaulyTracker();
+         var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
+          mTracker.init(initData);
+
+          /* STAR LOOP: 구매한 모든 상품에 대해 */
+          mTracker.PurchaseEvent.addPurchase( "{$itemId}", "{$productPrice}", "{$productQuantity}");
+          /* END LOOP */
+
+          mTracker.PurchaseEvent.setOrder("{$orderId}", "{$orderPrice}");
+
+          var purchaseEvent = mTracker.PurchaseEvent.build();
+          /* 재구매 표시 시작, 재구매 표시를 위해 이 부분이 추가되었다. */
+          purchaseEvent['purchase_type']='RE-PURCHASE';
+          /* 재구매 표시 끝 */
+          mTracker.trackEvent(purchaseEvent);
+</script>
+
+<script type="text/javascript">
+  var _rblqueue = _rblqueue || [];
+  /* STAR LOOP: 구매한 모든 상품에 대해 */
+  _rblqueue.push(['addVar', 'orderItems', {itemId:'{$itemId}', price:'{$productPrice}', quantity:'{$productQuantity}'}]);
+  /* END LOOP */
+</script>
+
+<script type="text/javascript">
+var _rblqueue = _rblqueue || [];
+_rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
+_rblqueue.push(['setVar','device','{$device}']);
+_rblqueue.push(['setVar','orderId','{$orderId}']);
+_rblqueue.push(['setVar','orderPrice','{$orderPrice}']);
+_rblqueue.push(['setVar','userId','{$userId}']);		// optional
+_rblqueue.push(['track','order']);
+setTimeout(function() {
+  (function(s,x){s=document.createElement('script');s.type='text/javascript';
+  s.async=true;s.defer=true;s.src=(('https:'==document.location.protocol)?'https':'http')+
+    '://assets.recobell.io/rblc/js/rblc-apne1.min.js';
+  x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();
+}, 0);
+</script>
+```
