@@ -41,6 +41,8 @@ tracker 스크립트의 삽입 위치는 아래 3군데이며 차례대로 기�
 Cauly 에서 발급한 track_code 를 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 라고 가정하겠습니다.
 예제 코드에서 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 부분은 따로 발급 받은 track_code 로 대체하여야 합니다.
 
+스크립트는 head 태그 보다는 body 태그 안쪽의 마지막 부분에 삽입하는 것이 좋습니다.
+
 ### Native SDK
 App내에 WebView를 사용하는 경우 Cauly Tracker Native SDK를 통해 추가된 기능을 사용할 수 있습니다.
 <br>각 SDK의 설치및 활용은 아래 링크에서 확인가능합니다.
@@ -59,8 +61,6 @@ App내에 WebView를 사용하는 경우 Cauly Tracker Native SDK를 통해 추�
          mTracker.trackEvent('OPEN');  
 </script>
 ```
-
-스크립트는 head 태그 보다는 body 태그 안쪽의 마지막 부분에 삽입하는 것이 좋습니다.
 
 
 #### 상품 상세 페이지
