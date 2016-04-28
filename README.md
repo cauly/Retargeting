@@ -22,6 +22,8 @@ Cauly 리타겟팅 연동 가이드
 		- 스크립트 삽입
 	- [구매 완료 페이지](#구매-완료-페이지)
 		- 스크립트 삽입
+	- [전환 완료 페이지](#전환-완료-페이지)
+		- 스크립트 삽입
 
 
 ### 연동 절차
@@ -247,3 +249,16 @@ setTimeout(function() {
 }, 0);
 </script>
 ```
+
+#### 전환 완료 페이지
+##### 스크립트 삽입
+```javascript
+<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
+<script type="text/javascript">
+         var mTracker = new CaulyTracker();
+         var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
+          mTracker.init(initData);
+          mTracker.trackEvent('CA_APPLY'); 
+</script>
+```
+광고주에 따라서 CA_APPLY 대신 CA_REGISTER, CA_CONVERSION 등으로 확장해서 사용이 가능합니다.
