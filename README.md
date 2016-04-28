@@ -43,13 +43,6 @@ Cauly 에서 발급한 track_code 를 aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee 라�
 
 스크립트는 head 태그 보다는 body 태그 안쪽의 마지막 부분에 삽입하는 것이 좋습니다.
 
-### Native SDK
-App내에 WebView를 사용하는 경우 Cauly Tracker Native SDK를 통해 추가된 기능을 사용할 수 있습니다.
-<br>각 SDK의 설치및 활용은 아래 링크에서 확인가능합니다.
-<br> 1.0.1 버전 iOS/Android SDK의 Purchase API는 작동하지 않습니다.
-- [Android SDK](https://github.com/CaulyTracker/Android-Tracking-SDK)
-- [iOS SDK](https://github.com/CaulyTracker/iOS-Tracking-SDK)
-
 #### 메인 페이지
 ##### 스크립트 삽입
 ```javascript
