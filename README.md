@@ -60,7 +60,7 @@ App내에 WebView를 사용하는 경우 Cauly Tracker Native SDK를 통해 추�
 </script>
 ```
 
-스크립트는 <head> 보다는 <body> 태그 안쪽의 마지막 부분에 삽입하는 것이 좋습니다.
+스크립트는 head 태그 보다는 body 태그 안쪽의 마지막 부분에 삽입하는 것이 좋습니다.
 
 
 #### 상품 상세 페이지
