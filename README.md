@@ -104,7 +104,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 | brandName | String | brand_name | varchar(500) | NULL | 브랜드명 | - |
 | regDate | String | reg_date | datetime | NULL | 상품 등록일, ex) 2015-06-25T05:43:18Z | 컨텐츠 게재일|
 | updateDate | String | update_date | datetime | NULL | 상품 갱신일, ex) 2015-06-25T05:43:18Z | 컨텐츠 변경일 |
-| expireDate |  | String | expire_date | datetime | NULL | 상품 만료일, ex) 2015-06-25T05:43:18Z | 컨텐츠 만료일 |
+| expireDate | String | expire_date | datetime | NULL | 상품 만료일, ex) 2015-06-25T05:43:18Z | 컨텐츠 만료일 |
 | stock | int | stock | int | NULL | 재고 | - |
 | state | String | state | varchar(100) | NULL | 상품 상태 기술 필드. e.g., available, soldout, ... | - |
 | description | String | description | Sttext | NULL | 상품 설명 | 컨텐츠 내용 |
