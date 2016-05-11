@@ -91,8 +91,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 | ---------- | -------------- | ----------- | --------------- | -------- | ---------------------- | ----------------- |
 | itemId | String | item_id | varchar(100) | NOT NULL | 상품ID | 컨텐츠 ID |
 | itemName | String | item_name | varchar(500) | NOT NULL | 상품명 | 컨텐츠 제목 |
-| itemImage | String | item_image | text | NULL | 상품 이미지 URL | 컨텐츠 이미지 URL |
-| itemUrl | String | item_url | text | NULL | 상품 ladning URL | 컨텐츠 landing URL |
+| itemImage | String | item_image | text | NOT NULL | 상품 이미지 URL | 컨텐츠 이미지 URL |
 | originalPrice | double | original_price | decimal(16,6) | NOT NULL | 제품가격 | - |
 | salePrice | double | sale_price | decimal(16,6) | NOT NULL | 판매가격 | - |
 | category1 | String | category1 | varchar(50) | NOT NULL | 카테고리 (대) | 섹션 (대) |
@@ -100,6 +99,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 | category3 | String | category3 | varchar(50) | NULL | 카테고리 (소) | 섹션 (소) |
 | category4 | String | category4 | varchar(50) | NULL | 카테고리 (세) | 섹션 (세) |
 | category5 | String | category5 | varchar(50) | NULL | 카테고리 (세세) | 섹션 (세세) |
+| itemUrl | String | item_url | text | NULL | 상품 ladning URL | 컨텐츠 landing URL |
 | brandId | String | brand_id | varchar(100) | NULL | 브랜드 ID | - |
 | brandName | String | brand_name | varchar(500) | NULL | 브랜드명 | - |
 | regDate | String | reg_date | datetime | NULL | 상품 등록일, ex) 2015-06-25T05:43:18Z | 컨텐츠 게재일|
