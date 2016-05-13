@@ -118,7 +118,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
         var mTracker = new CaulyTracker();
         var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
          mTracker.init(initData);
-         mTracker.trackEvent('PRODUCT');  
+         mTracker.trackEvent('PRODUCT','{$itemId}');  
 </script>
 
 <script type="text/javascript">
