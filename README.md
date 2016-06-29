@@ -106,7 +106,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 | updateDate | String | update_date | datetime | NULL | 상품 갱신일, ex) 2015-06-25T05:43:18Z | 컨텐츠 변경일 |
 | expireDate | String | expire_date | datetime | NULL | 상품 만료일, ex) 2015-06-25T05:43:18Z | 컨텐츠 만료일 |
 | stock | int | stock | int | NULL | 재고 | - |
-| state | String | state | varchar(100) | NULL | 상품 상태 기술 필드. e.g., available, soldout, ... | - |
+| state | String | state | varchar(100) | NULL | 상품 상태 기술 필드. e.g., available, soldout, ... 추천에서 제거하고 싶을 때는 REC_EXCLUDE 로 명시| - |
 | description | String | description | Sttext | NULL | 상품 설명 | 컨텐츠 내용 |
 | extraImage | String | extra_image | text | NULL | 상품 추가 이미지. 다수의 이미지 가능. 필드 구분자로 구분. | 컨텐츠 추가 이미지 |
 | locale | String | locale | varchar(20) | NULL | 지역 코드. 화폐나 상품명이 적용받음. e.g., KR, US, ... | 컨텐츠 지역 코드 |
