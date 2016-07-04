@@ -122,7 +122,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 </script>
 
 <script type="text/javascript">
-  var _rblqueue = _rblqueue || [];
+  window._rblq  = window._rblq || [];
   _rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
   _rblqueue.push(['setVar','device','{$device}']);
   _rblqueue.push(['setVar','itemId','{$itemId}']);
@@ -166,14 +166,14 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 </script>
 
 <script type="text/javascript">
-  var _rblqueue = _rblqueue || [];
+  window._rblq  = window._rblq || [];
   /* STAR LOOP: 구매한 모든 상품에 대해 */
   _rblqueue.push(['addVar', 'orderItems', {itemId:'{$itemId}', price:'{$productPrice}', quantity:'{$productQuantity}'}]);
   /* END LOOP */
 </script>
 
 <script type="text/javascript">
-var _rblqueue = _rblqueue || [];
+window._rblq  = window._rblq || [];
 _rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
 _rblqueue.push(['setVar','device','{$device}']);
 _rblqueue.push(['setVar','orderId','{$orderId}']);
@@ -221,14 +221,14 @@ setTimeout(function() {
 </script>
 
 <script type="text/javascript">
-  var _rblqueue = _rblqueue || [];
+  window._rblq  = window._rblq || [];
   /* STAR LOOP: 구매한 모든 상품에 대해 */
   _rblqueue.push(['addVar', 'orderItems', {itemId:'{$itemId}', price:'{$productPrice}', quantity:'{$productQuantity}'}]);
   /* END LOOP */
 </script>
 
 <script type="text/javascript">
-var _rblqueue = _rblqueue || [];
+window._rblq  = window._rblq || [];
 _rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
 _rblqueue.push(['setVar','device','{$device}']);
 _rblqueue.push(['setVar','orderId','{$orderId}']);
