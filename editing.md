@@ -64,7 +64,7 @@ Install 캠페인과 함께 진행하는 캠페인(Feed 또는 Static) 연동 �
 ### 페이지 별 설명
 
 #### 메인 페이지
-##### 스크립트 삽입
+###### 스크립트 삽입
 ```javascript
 <script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
@@ -77,7 +77,7 @@ Install 캠페인과 함께 진행하는 캠페인(Feed 또는 Static) 연동 �
 
 
 #### 상품 상세 페이지
-##### meta 태그 삽입
+###### meta 태그 삽입
 상품 상세 페이지에 아래와 같은 meta 태그를 상품에 맞춰 추가해주어야 합니다.
 
 ```
@@ -129,7 +129,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 | extraImage | String | extra_image | text | NULL | 상품 추가 이미지. 다수의 이미지 가능. 필드 구분자로 구분. | 컨텐츠 추가 이미지 |
 | locale | String | locale | varchar(20) | NULL | 지역 코드. 화폐나 상품명이 적용받음. e.g., KR, US, ... | 컨텐츠 지역 코드 |
 
-##### 스크립트 삽입
+###### 스크립트 삽입
 ```javascript
 <script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
@@ -165,7 +165,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 
 
 #### 구매 완료 페이지
-##### 스크립트 삽입
+###### 스크립트 삽입
 ```javascript
 <script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
@@ -217,7 +217,7 @@ setTimeout(function() {
 | {$userId} | NULL | 방문한 유저의 로그인 아이디 (optional) 법적이슈의 문제로<br/> HASH 값을 넣어주는 것이 일반적이다. |
 
 
-##### 스크립트 삽입(재구매를 따로 표시하려면)
+###### 스크립트 삽입(재구매를 따로 표시하려면)
 ```javascript
 <script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
@@ -263,7 +263,7 @@ setTimeout(function() {
 ```
 
 #### 전환 완료 페이지
-##### 스크립트 삽입
+###### 스크립트 삽입
 ```javascript
 <script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
