@@ -212,10 +212,10 @@ setTimeout(function() {
 | ---------- | -------- | ----------- |
 | {$device} | NOT NULL | 현재 방문한 페이지의 분류. 아래 3가지 값 중 하나를 가져야 한다.<br/> MW : Mobile Web<br/> MI : Mobile iOS APP<br/> MA : Mobile Android APP |
 | {$itemId} | NOT NULL | 결제된 상품 ID (상품코드). <br/>이때의 상품ID는 상품상세 페이지에서 전달한 상품ID와 동일한 것이어야 한다. |
-| {$productPrice} | NOT NULL | 결제된 상품의 가격 |
+| {$productPrice} | NOT NULL | 결제된 개별 상품들의 가격 |
 | {$productQuantity} | NOT NULL | 결제된 상품의 갯수 |
 | {$orderId} | NOT NULL | 결제완료된 주문 ID |
-| {$orderPrice} | NOT NULL | 결제완료된 주문의 가격 |
+| {$orderPrice} | NOT NULL | 결제완료된 주문 ID 기준의 주문가격, 전체 금액 |
 | {$userId} | NULL | 방문한 유저의 로그인 아이디 (optional) 법적이슈의 문제로<br/> HASH 값을 넣어주는 것이 일반적이다. |
 
 
