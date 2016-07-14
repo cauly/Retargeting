@@ -274,3 +274,7 @@ setTimeout(function() {
 </script>
 ```
 광고주에 따라서 CA_APPLY 대신 CA_REGISTER, CA_CONVERSION 등으로 확장해서 사용이 가능합니다.
+
+- CA_APPLY: 특정 이벤트에 지원하기
+- CA_REGISTER: 특정 이벤트에 등록하기
+- CA_CONVERSION: 
