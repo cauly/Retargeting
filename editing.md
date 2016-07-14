@@ -25,7 +25,7 @@ Mobile Web
 	- [전환 완료 페이지](#전환-완료-페이지)
 
 
-### 연동절차
+### 연동 절차
 1. Cauly 담당자 혹은 fsn_rt@fsn.co.kr로 연락하여 Cauly 리타겟팅 연동에 대해서 협의합니다.
 1. 협의 완료 후, Cauly 담당자를 통해 track_code 를 발급받습니다.
 1. track_code 를 포함한 tracker 코드를 해당하는 부분에 삽입합니다.
