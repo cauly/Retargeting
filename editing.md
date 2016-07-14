@@ -160,7 +160,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 ```
 | Field Name | Nullable | Description | 
 | ---------- | -------- | ----------- |
-| {$device} | NOT NULL | 현재 방문한 페이지의 분류. 아래 4가지 값 중 하나를 가져야 한다.<br/>MW : Mobile Web<br/> MI : Mobile iOS APP<br/> MA : Mobile Android APP |
+| {$device} | NOT NULL | 현재 방문한 페이지의 분류. 아래 3가지 값 중 하나를 가져야 한다.<br/>MW : Mobile Web<br/> MI : Mobile iOS APP<br/> MA : Mobile Android APP |
 | {$itemId} | NOT NULL | 현재 방문한 상품의 아이디, 고객사의 상품ID(상품코드)를 넣는다. |
 | {$userId} | NULL | 방문한 유저의 로그인 아이디 (optional) 법적이슈의 문제로 HASH 값을 넣어주는 것이 일반적이다. |
 | {$searchTerm} | NULL | 사이트 내부에서 검색을 통해서 상품상세 페이지로 들어왔다면, 검색어를 넣는다. 상품 상세 페이지에서 검색어를 얻을 수 없다면 비워두면 된다. |
@@ -210,7 +210,7 @@ setTimeout(function() {
 ```
 | Field Name | Nullable | Description | 
 | ---------- | -------- | ----------- |
-| {$device} | NOT NULL | 현재 방문한 페이지의 분류. 아래 4가지 값 중 하나를 가져야 한다.<br/> MW : Mobile Web<br/> MI : Mobile iOS APP<br/> MA : Mobile Android APP |
+| {$device} | NOT NULL | 현재 방문한 페이지의 분류. 아래 3가지 값 중 하나를 가져야 한다.<br/> MW : Mobile Web<br/> MI : Mobile iOS APP<br/> MA : Mobile Android APP |
 | {$itemId} | NOT NULL | 결제된 상품 ID (상품코드). <br/>이때의 상품ID는 상품상세 페이지에서 전달한 상품ID와 동일한 것이어야 한다. |
 | {$productPrice} | NOT NULL | 결제된 상품의 가격 |
 | {$productQuantity} | NOT NULL | 결제된 상품의 갯수 |
