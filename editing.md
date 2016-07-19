@@ -219,7 +219,7 @@ setTimeout(function() {
 | {$userId} | NULL | 방문한 유저의 로그인 아이디 (optional) 법적이슈의 문제로<br/> HASH 값을 넣어주는 것이 일반적이다. |
 
 
-###### 스크립트 삽입(재구매를 따로 표시하려면)
+###### 스크립트 삽입(재구매를 따로 표시하고 싶은 경우)
 ```javascript
 <script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
