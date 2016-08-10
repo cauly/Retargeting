@@ -343,7 +343,7 @@ setTimeout(function() {
   _paq.push(['order_id','{$orderId}']);
   _paq.push(['order_price','{$orderPrice}']);
   /* 재구매 표시 시작, 재구매 표시를 위해 이 부분이 추가되었다. */
-  _paq.push(['purchase_type'], 'RE-PURCHASE']);
+  _paq.push(['purchase_type', 'RE-PURCHASE']);
   /* 재구매 표시 끝 */
   var products_q = [];
 
