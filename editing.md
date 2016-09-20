@@ -68,12 +68,15 @@ Install 캠페인과 함께 진행하는 캠페인(Feed 또는 Static) 연동 �
 #### 메인 페이지
 ###### 스크립트 삽입
 ```javascript
-<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
-        var mTracker = new CaulyTracker();
-        var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
-         mTracker.init(initData);
-         mTracker.trackEvent('OPEN');  
+  window._paq = window._paq || [];
+  _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['event_name','OPEN']);
+  _paq.push(['send_event']);
+  _paq.push(['age', "31"]); // option
+  _paq.push(['gender', "M"]); // option
+  (function()
+  { var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); })();
 </script>
 ```
 
@@ -133,29 +136,14 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 
 ###### 스크립트 삽입
 ```javascript
-<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
-        var mTracker = new CaulyTracker();
-        var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
-         mTracker.init(initData);
-         mTracker.trackEvent('PRODUCT','{$itemId}');  
-</script>
-
-<script type="text/javascript">
-  window._rblqueue  = window._rblqueue || [];
-  _rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
-  _rblqueue.push(['setVar','device','{$device}']);
-  _rblqueue.push(['setVar','itemId','{$itemId}']);
-  _rblqueue.push(['setVar','userId','{$userId}']);		// optional, should be less than 80 char
-  _rblqueue.push(['setVar','searchTerm','{$searchTerm}']);  
-  _rblqueue.push(['track','view']);
-  _rblqueue.push(['track','product']);  /* -- IMPORTANT -- */
-  setTimeout(function() {
-    (function(s,x){s=document.createElement('script');s.type='text/javascript';
-    s.async=true;s.defer=true;s.src=(('https:'==document.location.protocol)?'https':'http')+
-    '://assets.recobell.io/rblc/js/rblc-apne1.min.js';
-    x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();
-  }, 0);
+  window._paq = window._paq || [];
+  _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['event_name','PRODUCT']);
+  _paq.push(['event_param','{$itemId}']);
+  _paq.push(['send_event']);
+  (function() { var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
+)();
 </script>
 ```
 | Field Name | Nullable | Description | 
@@ -169,43 +157,22 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 #### 구매 완료 페이지
 ###### 스크립트 삽입
 ```javascript
-<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
-         var mTracker = new CaulyTracker();
-         var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
-          mTracker.init(initData);
+  window._paq = window._paq || [];
+  _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['event_name','PURCHASE']);
+  _paq.push(['order_id','{$orderId}']);
+  _paq.push(['order_price','{$orderPrice}']);
+  var products_q = [];
 
-          /* STAR LOOP: 구매한 모든 상품에 대해 */
-          mTracker.PurchaseEvent.addPurchase( "{$itemId}", "{$productPrice}", "{$productQuantity}");
-          /* END LOOP */
-
-          mTracker.PurchaseEvent.setOrder("{$orderId}", "{$orderPrice}");
-
-          var purchaseEvent = mTracker.PurchaseEvent.build();
-          mTracker.trackEvent(purchaseEvent);
-</script>
-
-<script type="text/javascript">
-  window._rblqueue  = window._rblqueue || [];
   /* STAR LOOP: 구매한 모든 상품에 대해 */
-  _rblqueue.push(['addVar', 'orderItems', {itemId:'{$itemId}', price:'{$productPrice}', quantity:'{$productQuantity}'}]);
+  products_q.push({'product_id': '{$itemId}','product_price':'{$productPrice}','product_quantity':'{$productQuantity}'});
   /* END LOOP */
-</script>
 
-<script type="text/javascript">
-window._rblqueue  = window._rblqueue || [];
-_rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
-_rblqueue.push(['setVar','device','{$device}']);
-_rblqueue.push(['setVar','orderId','{$orderId}']);
-_rblqueue.push(['setVar','orderPrice','{$orderPrice}']);
-_rblqueue.push(['setVar','userId','{$userId}']);		// optional
-_rblqueue.push(['track','order']);
-setTimeout(function() {
-  (function(s,x){s=document.createElement('script');s.type='text/javascript';
-  s.async=true;s.defer=true;s.src=(('https:'==document.location.protocol)?'https':'http')+
-    '://assets.recobell.io/rblc/js/rblc-apne1.min.js';
-  x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();
-}, 0);
+  _paq.push(['product_infos',products_q]);
+  _paq.push(['send_event']);    
+  (function(){ var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
+)();
 </script>
 ```
 | Field Name | Nullable | Description | 
@@ -221,58 +188,38 @@ setTimeout(function() {
 
 ###### 스크립트 삽입(재구매를 따로 표시하고 싶은 경우)
 ```javascript
-<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
-         var mTracker = new CaulyTracker();
-         var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
-          mTracker.init(initData);
+  window._paq = window._paq || [];
+  _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['event_name','PURCHASE']);
+  _paq.push(['order_id','{$orderId}']);
+  _paq.push(['order_price','{$orderPrice}']);
+  /* 재구매 표시 시작, 재구매 표시를 위해 이 부분이 추가되었다. */
+  _paq.push(['purchase_type', 'RE-PURCHASE']);
+  /* 재구매 표시 끝 */
+  var products_q = [];
 
-          /* STAR LOOP: 구매한 모든 상품에 대해 */
-          mTracker.PurchaseEvent.addPurchase( "{$itemId}", "{$productPrice}", "{$productQuantity}");
-          /* END LOOP */
-
-          mTracker.PurchaseEvent.setOrder("{$orderId}", "{$orderPrice}");
-
-          var purchaseEvent = mTracker.PurchaseEvent.build();
-          /* 재구매 표시 시작, 재구매 표시를 위해 이 부분이 추가되었다. */
-          purchaseEvent['purchase_type']='RE-PURCHASE';
-          /* 재구매 표시 끝 */
-          mTracker.trackEvent(purchaseEvent);
-</script>
-
-<script type="text/javascript">
-  window._rblqueue  = window._rblqueue || [];
   /* STAR LOOP: 구매한 모든 상품에 대해 */
-  _rblqueue.push(['addVar', 'orderItems', {itemId:'{$itemId}', price:'{$productPrice}', quantity:'{$productQuantity}'}]);
+  products_q.push({'product_id': '{$itemId}','product_price':'{$productPrice}','product_quantity':'{$productQuantity}'});
   /* END LOOP */
-</script>
 
-<script type="text/javascript">
-window._rblqueue  = window._rblqueue || [];
-_rblqueue.push(['setVar','cuid','aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee']);
-_rblqueue.push(['setVar','device','{$device}']);
-_rblqueue.push(['setVar','orderId','{$orderId}']);
-_rblqueue.push(['setVar','orderPrice','{$orderPrice}']);
-_rblqueue.push(['setVar','userId','{$userId}']);		// optional
-_rblqueue.push(['track','order']);
-setTimeout(function() {
-  (function(s,x){s=document.createElement('script');s.type='text/javascript';
-  s.async=true;s.defer=true;s.src=(('https:'==document.location.protocol)?'https':'http')+
-    '://assets.recobell.io/rblc/js/rblc-apne1.min.js';
-  x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();
-}, 0);
+  _paq.push(['product_infos',products_q]);
+  _paq.push(['send_event']);    
+  (function(){ var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
+)();
 </script>
 ```
 
 #### 전환 완료 페이지
 ###### 스크립트 삽입
 ```javascript
-<script type="text/javascript" src="//image.cauly.co.kr/script/caulytracker.js"></script>
 <script type="text/javascript">
-         var mTracker = new CaulyTracker();
-         var initData = mTracker.InfoBuilder.setTrackCode("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").build();
-          mTracker.init(initData);
-          mTracker.trackEvent('CA_CONVERSION'); 
+  window._paq = window._paq || [];
+  _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['event_name','CA_CONVERSION']);
+  _paq.push(['send_event']);
+  (function() { var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
+  )();
 </script>
 ```
 
