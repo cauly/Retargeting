@@ -117,7 +117,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 | itemImage | String | item_image | text | NOT NULL | 상품 이미지 URL | 컨텐츠 이미지 URL |
 | originalPrice | double | original_price | decimal(16,6) | NOT NULL | 제품가격 | - |
 | salePrice | double | sale_price | decimal(16,6) | NOT NULL | 판매가격 | - |
-| category1 | String | category1 | varchar(50) | NOT NULL | 카테고리 (대) <br/>ex)의류, 스포츠, 가구 | 섹션 (대) |
+| category1 | String | category1 | varchar(50) | NOT NULL | 카테고리 (대) <br/>ex) 의류, 스포츠, 가구 | 섹션 (대) |
 | category2 | String | category2 | varchar(50) | NOT NULL | 카테고리 (중) <br/>ex) 여성의류, 등산, 주방가구 | 섹션 (중) |
 | category3 | String | category3 | varchar(50) | NULL | 카테고리 (소) | 섹션 (소) |
 | category4 | String | category4 | varchar(50) | NULL | 카테고리 (세) | 섹션 (세) |
