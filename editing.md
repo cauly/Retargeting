@@ -59,7 +59,7 @@ Install 캠페인과 함께 진행하는 캠페인(Feed 또는 Static) 연동 �
 
 | 연동위치 | 목적 | 연동항목 | 연동 가이드 |
 | ---------- | -------------- | ----------- | --------------- |
-| Android APP 마켓 | - Install 수 측정<br/>- Install 후 구매/전환 측정 | Install referrer 추가 | [바로 가기](https://github.com/CaulyTracker/Android-Tracking-SDK-Hybrid) |
+| Android APP 마켓 | - Install 수 측정<br/>- Install 후 구매/전환 측정 | 앱연동 | [바로 가기](https://github.com/CaulyTracker/Android-Tracking-SDK-Hybrid) |
 
 ===
 
