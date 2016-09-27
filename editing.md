@@ -139,7 +139,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 <script type="text/javascript">
   window._paq = window._paq || [];
   _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
-  _paq.push(['user_id','{$userId}']);
+  _paq.push(['user_id','{$userId}']); // option
   _paq.push(['event_name','PRODUCT']);
   _paq.push(['event_param','{$itemId}']);
   _paq.push(['send_event']);
@@ -159,7 +159,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 <script type="text/javascript">
   window._paq = window._paq || [];
   _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
-  _paq.push(['user_id','{$userId}']);
+  _paq.push(['user_id','{$userId}']); // option
   _paq.push(['event_name','PURCHASE']);
   _paq.push(['order_id','{$orderId}']);
   _paq.push(['order_price','{$orderPrice}']);
@@ -190,6 +190,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 <script type="text/javascript">
   window._paq = window._paq || [];
   _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['user_id','{$userId}']); // option
   _paq.push(['event_name','PURCHASE']);
   _paq.push(['order_id','{$orderId}']);
   _paq.push(['order_price','{$orderPrice}']);
@@ -215,6 +216,7 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
 <script type="text/javascript">
   window._paq = window._paq || [];
   _paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+  _paq.push(['user_id','{$userId}']); // option
   _paq.push(['event_name','CA_CONVERSION']);
   _paq.push(['send_event']);
   (function() { var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
