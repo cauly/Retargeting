@@ -22,6 +22,8 @@ Mobile Web
 	- [메인 페이지](#메인-페이지)
 	- [상품 상세 페이지](#상품-상세-페이지)
 	- [구매 완료 페이지](#구매-완료-페이지)
+	- [장바구니 페이지](#장바구니-페이지)
+	- [검색 페이지](#검색-페이지)
 	- [전환 완료 페이지](#전환-완료-페이지)
 
 
@@ -207,6 +209,37 @@ Nullable의 Not NULL은 필수로 채워야 하는 값이며, 필수가 아닌 �
   _paq.push(['product_infos',products_q]);
   _paq.push(['send_event']);    
   (function(){ var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
+)();
+</script>
+```
+
+#### 장바구니 페이지
+###### 스크립트 삽입
+```javascript
+<script type="text/javascript">
+window._paq = window._paq || [];
+_paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+_paq.push(['user_id','{$userId}']); // option
+_paq.push(['event_name','CART']);
+_paq.push(['event_param','{$itemId}']);
+_paq.push(['send_event']);
+(function()
+{ var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
+)();
+</script>
+```
+
+#### 검색 페이지
+###### 스크립트 삽입
+```javascript
+<script type="text/javascript">
+window._paq = window._paq || [];
+_paq.push(['track_code',"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"]);
+_paq.push(['user_id','{$userId}']); // option
+_paq.push(['event_name','SEARCH']);
+_paq.push(['event_param','{$search_word}']);
+_paq.push(['send_event']);
+(function() { var u="//image.cauly.co.kr/script/"; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'caulytracker_async.js'; s.parentNode.insertBefore(g,s); }
 )();
 </script>
 ```
